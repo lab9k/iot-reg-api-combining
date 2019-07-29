@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -28,11 +27,7 @@ namespace iot_reg_combining_backend {
         app.UseHsts();
       }
 
-      if (!env.IsDevelopment()) {
-        Console.WriteLine("App starting in production mode");
-        app.UseHttpsRedirection();
-      }
-
+      app.UseHttpsRedirection();
       app.UseMvc();
     }
   }
